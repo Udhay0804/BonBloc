@@ -2,6 +2,7 @@
 class Strings {
   static var appName = 'BonBloc';
   static var homePage = 'Home Page';
+  static var qrPage = 'QR Scan Page';
   static var searchNearByDevices = 'Search Nearby Devices';
   static var location = 'Location';
   static var tryAgain = 'Try Again';

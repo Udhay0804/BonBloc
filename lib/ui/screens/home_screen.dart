@@ -1,5 +1,6 @@
 import 'package:app_settings/app_settings.dart';
 import 'package:bonbloc/bloc/nearByDevices/nearby_devices_bloc.dart';
+import 'package:bonbloc/ui/screens/qr_scanner_screen.dart';
 import 'package:bonbloc/ui/widgets/atoms/placeholderWidgets/placeholder_widgets.dart';
 import 'package:bonbloc/ui/widgets/components/styleComponents/style_components.dart';
 import 'package:bonbloc/ui/widgets/dialogs/bluetooth_alert_dialog.dart';
@@ -25,9 +26,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      checkBluetooth();
-    });
     super.initState();
   }
 
@@ -38,15 +36,23 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Strings.homePage,
         context: context,
         showBackBtn: false,
+        qrScan: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const QRScannerScreen(),),);
+        },
+        incrementTap: (){
+
+        },
       ),
       body: Column(
         children: [
           getButton(
             label: Strings.searchNearByDevices,
-            onTap: () {
-              context.read<NearbyDevicesBloc>().add(
-                    const NearbyDevicesEvent.fetchDevices(),
-                  );
+            onTap: () async {
+              if (await checkBluetooth()) {
+                fetchDevices();
+              } else {
+                openBluetooth();
+              }
             },
             isEnable: true,
           ),
@@ -83,17 +89,19 @@ class _HomeScreenState extends State<HomeScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            result.device.name,
+            result.device.name.isNotEmpty
+                ? result.device.name
+                : 'Unknown Device',
             style: getHeadingStyle(),
           ),
           sizedBoxHeight10(),
           Text(
-            result.device.id.id,
+            'Address: ${result.device.id.id}',
             style: getBodyStyle(),
           ),
           sizedBoxHeight10(),
           Text(
-            '${result.advertisementData.connectable}',
+            'Connected Type: ${result.advertisementData.connectable}',
             style: getBodyStyle(),
           ),
         ],
@@ -101,11 +109,21 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Future<void> checkBluetooth() async {
+  Future<bool> checkBluetooth() async {
     var flutterBlue = locator<FlutterBlueHandler>();
-    var isOn = await flutterBlue.flutterBlueIns.isOn;
-    if (!isOn) {}
-    Logger.appLogs('isOn:: $isOn');
-    CommonDialog.btAlertDialog(context);
+    return await flutterBlue.flutterBlueIns.isOn;
+  }
+
+  void openBluetooth() {
+    CommonDialog.btAlertDialog(context, () {
+      Navigator.pop(context);
+      AppSettings.openBluetoothSettings();
+    });
+  }
+
+  void fetchDevices() {
+    context.read<NearbyDevicesBloc>().add(
+          const NearbyDevicesEvent.fetchDevices(),
+        );
   }
 }

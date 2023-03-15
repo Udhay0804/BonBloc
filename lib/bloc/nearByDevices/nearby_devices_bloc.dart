@@ -45,9 +45,7 @@ class NearbyDevicesBloc extends Bloc<NearbyDevicesEvent, NearbyDevicesState> {
     await emit.forEach(
       btController.listen,
       onData: (ScanResult data) {
-        if(data.device.name.isNotEmpty) {
           devicesList.add(data);
-        }
         return NearbyDevicesState.successDevicesInfo(result: devicesList);
       },
     );
