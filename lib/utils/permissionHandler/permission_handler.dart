@@ -14,9 +14,7 @@ class PermissionHandler {
   }
 
   final List<Permission> permissions = [
-    Permission.storage,
     Permission.location,
-    Permission.bluetooth,
     Permission.camera,
   ];
 

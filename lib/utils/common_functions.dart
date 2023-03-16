@@ -1,30 +1,11 @@
 import 'package:bonbloc/ui/widgets/atoms/button/button_widget.dart';
-import 'package:bonbloc/ui/widgets/molecules/permissionPrompt/permission_prompt.dart';
 import 'package:bonbloc/utils/config/locator.dart';
 import 'package:bonbloc/utils/config/logger.dart';
 import 'package:bonbloc/utils/constants/constant.dart';
+import 'package:bonbloc/utils/flutterBlueHandler/flutter_blue_handler.dart';
 import 'package:bonbloc/utils/permissionHandler/permission_handler.dart';
 import 'package:flutter/material.dart';
 
-
-void showPermissionPrompt(BuildContext context) {
-  if (!Constant.isPermissionGranted) {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return PermissionPrompt(
-          tapYes: () {
-            requestPermission();
-            Navigator.pop(context);
-          },
-          tapCancel: () {
-            Navigator.pop(context);
-          },
-        );
-      },
-    );
-  }
-}
 Future<bool> requestPermission() async {
   Constant.isPermissionGranted = await checkPermission();
 
@@ -74,4 +55,10 @@ Widget getButton({
     ),
   );
 }
+
+Future<bool> checkBluetooth() async {
+  var flutterBlue = locator<FlutterBlueHandler>();
+  return await flutterBlue.flutterBlueIns.isOn;
+}
+
 

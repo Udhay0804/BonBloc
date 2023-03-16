@@ -5,10 +5,14 @@ class NearbyDevicesState with _$NearbyDevicesState {
   const factory NearbyDevicesState.initial() = NearbyDevicesInitial;
 
   const factory NearbyDevicesState.loading() = NearbyDevicesLoading;
+  const factory NearbyDevicesState.tickerLoading() = TickerLoading;
 
   const factory NearbyDevicesState.successDevicesInfo(
       {required List<ScanResult> result}) = NearbyDevicesSuccess;
 
   const factory NearbyDevicesState.checkBTOn(
       {required bool isBtOn}) = IsBluetoothEnabled;
+
+  const factory NearbyDevicesState.getCurrentState(
+      {required num tick}) = CurrentStateNum;
 }

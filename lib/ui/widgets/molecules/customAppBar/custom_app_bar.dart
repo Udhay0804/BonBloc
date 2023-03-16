@@ -52,7 +52,7 @@ PreferredSizeWidget bonBlocToolBar({
                   fit: BoxFit.cover,
                   width: 25,
                   height: 25,
-                  data: SVGAssets.icCross,
+                  data: SVGAssets.icPlus,
                 ),
               )
             : emptySizedBox(),

@@ -20,18 +20,21 @@ mixin _$NearbyDevicesEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchDevices,
     required TResult Function() checkBluetooth,
+    required TResult Function() setIncrement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchDevices,
     TResult? Function()? checkBluetooth,
+    TResult? Function()? setIncrement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchDevices,
     TResult Function()? checkBluetooth,
+    TResult Function()? setIncrement,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$NearbyDevicesEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(NearbyDevicesList value) fetchDevices,
     required TResult Function(CheckBluetooth value) checkBluetooth,
+    required TResult Function(RightStateNum value) setIncrement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(NearbyDevicesList value)? fetchDevices,
     TResult? Function(CheckBluetooth value)? checkBluetooth,
+    TResult? Function(RightStateNum value)? setIncrement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NearbyDevicesList value)? fetchDevices,
     TResult Function(CheckBluetooth value)? checkBluetooth,
+    TResult Function(RightStateNum value)? setIncrement,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +120,7 @@ class _$NearbyDevicesList implements NearbyDevicesList {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchDevices,
     required TResult Function() checkBluetooth,
+    required TResult Function() setIncrement,
   }) {
     return fetchDevices();
   }
@@ -123,6 +130,7 @@ class _$NearbyDevicesList implements NearbyDevicesList {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchDevices,
     TResult? Function()? checkBluetooth,
+    TResult? Function()? setIncrement,
   }) {
     return fetchDevices?.call();
   }
@@ -132,6 +140,7 @@ class _$NearbyDevicesList implements NearbyDevicesList {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchDevices,
     TResult Function()? checkBluetooth,
+    TResult Function()? setIncrement,
     required TResult orElse(),
   }) {
     if (fetchDevices != null) {
@@ -145,6 +154,7 @@ class _$NearbyDevicesList implements NearbyDevicesList {
   TResult map<TResult extends Object?>({
     required TResult Function(NearbyDevicesList value) fetchDevices,
     required TResult Function(CheckBluetooth value) checkBluetooth,
+    required TResult Function(RightStateNum value) setIncrement,
   }) {
     return fetchDevices(this);
   }
@@ -154,6 +164,7 @@ class _$NearbyDevicesList implements NearbyDevicesList {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(NearbyDevicesList value)? fetchDevices,
     TResult? Function(CheckBluetooth value)? checkBluetooth,
+    TResult? Function(RightStateNum value)? setIncrement,
   }) {
     return fetchDevices?.call(this);
   }
@@ -163,6 +174,7 @@ class _$NearbyDevicesList implements NearbyDevicesList {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NearbyDevicesList value)? fetchDevices,
     TResult Function(CheckBluetooth value)? checkBluetooth,
+    TResult Function(RightStateNum value)? setIncrement,
     required TResult orElse(),
   }) {
     if (fetchDevices != null) {
@@ -216,6 +228,7 @@ class _$CheckBluetooth implements CheckBluetooth {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchDevices,
     required TResult Function() checkBluetooth,
+    required TResult Function() setIncrement,
   }) {
     return checkBluetooth();
   }
@@ -225,6 +238,7 @@ class _$CheckBluetooth implements CheckBluetooth {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchDevices,
     TResult? Function()? checkBluetooth,
+    TResult? Function()? setIncrement,
   }) {
     return checkBluetooth?.call();
   }
@@ -234,6 +248,7 @@ class _$CheckBluetooth implements CheckBluetooth {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchDevices,
     TResult Function()? checkBluetooth,
+    TResult Function()? setIncrement,
     required TResult orElse(),
   }) {
     if (checkBluetooth != null) {
@@ -247,6 +262,7 @@ class _$CheckBluetooth implements CheckBluetooth {
   TResult map<TResult extends Object?>({
     required TResult Function(NearbyDevicesList value) fetchDevices,
     required TResult Function(CheckBluetooth value) checkBluetooth,
+    required TResult Function(RightStateNum value) setIncrement,
   }) {
     return checkBluetooth(this);
   }
@@ -256,6 +272,7 @@ class _$CheckBluetooth implements CheckBluetooth {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(NearbyDevicesList value)? fetchDevices,
     TResult? Function(CheckBluetooth value)? checkBluetooth,
+    TResult? Function(RightStateNum value)? setIncrement,
   }) {
     return checkBluetooth?.call(this);
   }
@@ -265,6 +282,7 @@ class _$CheckBluetooth implements CheckBluetooth {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NearbyDevicesList value)? fetchDevices,
     TResult Function(CheckBluetooth value)? checkBluetooth,
+    TResult Function(RightStateNum value)? setIncrement,
     required TResult orElse(),
   }) {
     if (checkBluetooth != null) {
@@ -279,29 +297,143 @@ abstract class CheckBluetooth implements NearbyDevicesEvent {
 }
 
 /// @nodoc
+abstract class _$$RightStateNumCopyWith<$Res> {
+  factory _$$RightStateNumCopyWith(
+          _$RightStateNum value, $Res Function(_$RightStateNum) then) =
+      __$$RightStateNumCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RightStateNumCopyWithImpl<$Res>
+    extends _$NearbyDevicesEventCopyWithImpl<$Res, _$RightStateNum>
+    implements _$$RightStateNumCopyWith<$Res> {
+  __$$RightStateNumCopyWithImpl(
+      _$RightStateNum _value, $Res Function(_$RightStateNum) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$RightStateNum implements RightStateNum {
+  const _$RightStateNum();
+
+  @override
+  String toString() {
+    return 'NearbyDevicesEvent.setIncrement()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RightStateNum);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchDevices,
+    required TResult Function() checkBluetooth,
+    required TResult Function() setIncrement,
+  }) {
+    return setIncrement();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchDevices,
+    TResult? Function()? checkBluetooth,
+    TResult? Function()? setIncrement,
+  }) {
+    return setIncrement?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchDevices,
+    TResult Function()? checkBluetooth,
+    TResult Function()? setIncrement,
+    required TResult orElse(),
+  }) {
+    if (setIncrement != null) {
+      return setIncrement();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(NearbyDevicesList value) fetchDevices,
+    required TResult Function(CheckBluetooth value) checkBluetooth,
+    required TResult Function(RightStateNum value) setIncrement,
+  }) {
+    return setIncrement(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(NearbyDevicesList value)? fetchDevices,
+    TResult? Function(CheckBluetooth value)? checkBluetooth,
+    TResult? Function(RightStateNum value)? setIncrement,
+  }) {
+    return setIncrement?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NearbyDevicesList value)? fetchDevices,
+    TResult Function(CheckBluetooth value)? checkBluetooth,
+    TResult Function(RightStateNum value)? setIncrement,
+    required TResult orElse(),
+  }) {
+    if (setIncrement != null) {
+      return setIncrement(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class RightStateNum implements NearbyDevicesEvent {
+  const factory RightStateNum() = _$RightStateNum;
+}
+
+/// @nodoc
 mixin _$NearbyDevicesState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() tickerLoading,
     required TResult Function(List<ScanResult> result) successDevicesInfo,
     required TResult Function(bool isBtOn) checkBTOn,
+    required TResult Function(num tick) getCurrentState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? tickerLoading,
     TResult? Function(List<ScanResult> result)? successDevicesInfo,
     TResult? Function(bool isBtOn)? checkBTOn,
+    TResult? Function(num tick)? getCurrentState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? tickerLoading,
     TResult Function(List<ScanResult> result)? successDevicesInfo,
     TResult Function(bool isBtOn)? checkBTOn,
+    TResult Function(num tick)? getCurrentState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -309,24 +441,30 @@ mixin _$NearbyDevicesState {
   TResult map<TResult extends Object?>({
     required TResult Function(NearbyDevicesInitial value) initial,
     required TResult Function(NearbyDevicesLoading value) loading,
+    required TResult Function(TickerLoading value) tickerLoading,
     required TResult Function(NearbyDevicesSuccess value) successDevicesInfo,
     required TResult Function(IsBluetoothEnabled value) checkBTOn,
+    required TResult Function(CurrentStateNum value) getCurrentState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(NearbyDevicesInitial value)? initial,
     TResult? Function(NearbyDevicesLoading value)? loading,
+    TResult? Function(TickerLoading value)? tickerLoading,
     TResult? Function(NearbyDevicesSuccess value)? successDevicesInfo,
     TResult? Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult? Function(CurrentStateNum value)? getCurrentState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NearbyDevicesInitial value)? initial,
     TResult Function(NearbyDevicesLoading value)? loading,
+    TResult Function(TickerLoading value)? tickerLoading,
     TResult Function(NearbyDevicesSuccess value)? successDevicesInfo,
     TResult Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult Function(CurrentStateNum value)? getCurrentState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -390,8 +528,10 @@ class _$NearbyDevicesInitial implements NearbyDevicesInitial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() tickerLoading,
     required TResult Function(List<ScanResult> result) successDevicesInfo,
     required TResult Function(bool isBtOn) checkBTOn,
+    required TResult Function(num tick) getCurrentState,
   }) {
     return initial();
   }
@@ -401,8 +541,10 @@ class _$NearbyDevicesInitial implements NearbyDevicesInitial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? tickerLoading,
     TResult? Function(List<ScanResult> result)? successDevicesInfo,
     TResult? Function(bool isBtOn)? checkBTOn,
+    TResult? Function(num tick)? getCurrentState,
   }) {
     return initial?.call();
   }
@@ -412,8 +554,10 @@ class _$NearbyDevicesInitial implements NearbyDevicesInitial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? tickerLoading,
     TResult Function(List<ScanResult> result)? successDevicesInfo,
     TResult Function(bool isBtOn)? checkBTOn,
+    TResult Function(num tick)? getCurrentState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -427,8 +571,10 @@ class _$NearbyDevicesInitial implements NearbyDevicesInitial {
   TResult map<TResult extends Object?>({
     required TResult Function(NearbyDevicesInitial value) initial,
     required TResult Function(NearbyDevicesLoading value) loading,
+    required TResult Function(TickerLoading value) tickerLoading,
     required TResult Function(NearbyDevicesSuccess value) successDevicesInfo,
     required TResult Function(IsBluetoothEnabled value) checkBTOn,
+    required TResult Function(CurrentStateNum value) getCurrentState,
   }) {
     return initial(this);
   }
@@ -438,8 +584,10 @@ class _$NearbyDevicesInitial implements NearbyDevicesInitial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(NearbyDevicesInitial value)? initial,
     TResult? Function(NearbyDevicesLoading value)? loading,
+    TResult? Function(TickerLoading value)? tickerLoading,
     TResult? Function(NearbyDevicesSuccess value)? successDevicesInfo,
     TResult? Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult? Function(CurrentStateNum value)? getCurrentState,
   }) {
     return initial?.call(this);
   }
@@ -449,8 +597,10 @@ class _$NearbyDevicesInitial implements NearbyDevicesInitial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NearbyDevicesInitial value)? initial,
     TResult Function(NearbyDevicesLoading value)? loading,
+    TResult Function(TickerLoading value)? tickerLoading,
     TResult Function(NearbyDevicesSuccess value)? successDevicesInfo,
     TResult Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult Function(CurrentStateNum value)? getCurrentState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -504,8 +654,10 @@ class _$NearbyDevicesLoading implements NearbyDevicesLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() tickerLoading,
     required TResult Function(List<ScanResult> result) successDevicesInfo,
     required TResult Function(bool isBtOn) checkBTOn,
+    required TResult Function(num tick) getCurrentState,
   }) {
     return loading();
   }
@@ -515,8 +667,10 @@ class _$NearbyDevicesLoading implements NearbyDevicesLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? tickerLoading,
     TResult? Function(List<ScanResult> result)? successDevicesInfo,
     TResult? Function(bool isBtOn)? checkBTOn,
+    TResult? Function(num tick)? getCurrentState,
   }) {
     return loading?.call();
   }
@@ -526,8 +680,10 @@ class _$NearbyDevicesLoading implements NearbyDevicesLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? tickerLoading,
     TResult Function(List<ScanResult> result)? successDevicesInfo,
     TResult Function(bool isBtOn)? checkBTOn,
+    TResult Function(num tick)? getCurrentState,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -541,8 +697,10 @@ class _$NearbyDevicesLoading implements NearbyDevicesLoading {
   TResult map<TResult extends Object?>({
     required TResult Function(NearbyDevicesInitial value) initial,
     required TResult Function(NearbyDevicesLoading value) loading,
+    required TResult Function(TickerLoading value) tickerLoading,
     required TResult Function(NearbyDevicesSuccess value) successDevicesInfo,
     required TResult Function(IsBluetoothEnabled value) checkBTOn,
+    required TResult Function(CurrentStateNum value) getCurrentState,
   }) {
     return loading(this);
   }
@@ -552,8 +710,10 @@ class _$NearbyDevicesLoading implements NearbyDevicesLoading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(NearbyDevicesInitial value)? initial,
     TResult? Function(NearbyDevicesLoading value)? loading,
+    TResult? Function(TickerLoading value)? tickerLoading,
     TResult? Function(NearbyDevicesSuccess value)? successDevicesInfo,
     TResult? Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult? Function(CurrentStateNum value)? getCurrentState,
   }) {
     return loading?.call(this);
   }
@@ -563,8 +723,10 @@ class _$NearbyDevicesLoading implements NearbyDevicesLoading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NearbyDevicesInitial value)? initial,
     TResult Function(NearbyDevicesLoading value)? loading,
+    TResult Function(TickerLoading value)? tickerLoading,
     TResult Function(NearbyDevicesSuccess value)? successDevicesInfo,
     TResult Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult Function(CurrentStateNum value)? getCurrentState,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -576,6 +738,132 @@ class _$NearbyDevicesLoading implements NearbyDevicesLoading {
 
 abstract class NearbyDevicesLoading implements NearbyDevicesState {
   const factory NearbyDevicesLoading() = _$NearbyDevicesLoading;
+}
+
+/// @nodoc
+abstract class _$$TickerLoadingCopyWith<$Res> {
+  factory _$$TickerLoadingCopyWith(
+          _$TickerLoading value, $Res Function(_$TickerLoading) then) =
+      __$$TickerLoadingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$TickerLoadingCopyWithImpl<$Res>
+    extends _$NearbyDevicesStateCopyWithImpl<$Res, _$TickerLoading>
+    implements _$$TickerLoadingCopyWith<$Res> {
+  __$$TickerLoadingCopyWithImpl(
+      _$TickerLoading _value, $Res Function(_$TickerLoading) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$TickerLoading implements TickerLoading {
+  const _$TickerLoading();
+
+  @override
+  String toString() {
+    return 'NearbyDevicesState.tickerLoading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$TickerLoading);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() tickerLoading,
+    required TResult Function(List<ScanResult> result) successDevicesInfo,
+    required TResult Function(bool isBtOn) checkBTOn,
+    required TResult Function(num tick) getCurrentState,
+  }) {
+    return tickerLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? tickerLoading,
+    TResult? Function(List<ScanResult> result)? successDevicesInfo,
+    TResult? Function(bool isBtOn)? checkBTOn,
+    TResult? Function(num tick)? getCurrentState,
+  }) {
+    return tickerLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? tickerLoading,
+    TResult Function(List<ScanResult> result)? successDevicesInfo,
+    TResult Function(bool isBtOn)? checkBTOn,
+    TResult Function(num tick)? getCurrentState,
+    required TResult orElse(),
+  }) {
+    if (tickerLoading != null) {
+      return tickerLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(NearbyDevicesInitial value) initial,
+    required TResult Function(NearbyDevicesLoading value) loading,
+    required TResult Function(TickerLoading value) tickerLoading,
+    required TResult Function(NearbyDevicesSuccess value) successDevicesInfo,
+    required TResult Function(IsBluetoothEnabled value) checkBTOn,
+    required TResult Function(CurrentStateNum value) getCurrentState,
+  }) {
+    return tickerLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(NearbyDevicesInitial value)? initial,
+    TResult? Function(NearbyDevicesLoading value)? loading,
+    TResult? Function(TickerLoading value)? tickerLoading,
+    TResult? Function(NearbyDevicesSuccess value)? successDevicesInfo,
+    TResult? Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult? Function(CurrentStateNum value)? getCurrentState,
+  }) {
+    return tickerLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NearbyDevicesInitial value)? initial,
+    TResult Function(NearbyDevicesLoading value)? loading,
+    TResult Function(TickerLoading value)? tickerLoading,
+    TResult Function(NearbyDevicesSuccess value)? successDevicesInfo,
+    TResult Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult Function(CurrentStateNum value)? getCurrentState,
+    required TResult orElse(),
+  }) {
+    if (tickerLoading != null) {
+      return tickerLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TickerLoading implements NearbyDevicesState {
+  const factory TickerLoading() = _$TickerLoading;
 }
 
 /// @nodoc
@@ -652,8 +940,10 @@ class _$NearbyDevicesSuccess implements NearbyDevicesSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() tickerLoading,
     required TResult Function(List<ScanResult> result) successDevicesInfo,
     required TResult Function(bool isBtOn) checkBTOn,
+    required TResult Function(num tick) getCurrentState,
   }) {
     return successDevicesInfo(result);
   }
@@ -663,8 +953,10 @@ class _$NearbyDevicesSuccess implements NearbyDevicesSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? tickerLoading,
     TResult? Function(List<ScanResult> result)? successDevicesInfo,
     TResult? Function(bool isBtOn)? checkBTOn,
+    TResult? Function(num tick)? getCurrentState,
   }) {
     return successDevicesInfo?.call(result);
   }
@@ -674,8 +966,10 @@ class _$NearbyDevicesSuccess implements NearbyDevicesSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? tickerLoading,
     TResult Function(List<ScanResult> result)? successDevicesInfo,
     TResult Function(bool isBtOn)? checkBTOn,
+    TResult Function(num tick)? getCurrentState,
     required TResult orElse(),
   }) {
     if (successDevicesInfo != null) {
@@ -689,8 +983,10 @@ class _$NearbyDevicesSuccess implements NearbyDevicesSuccess {
   TResult map<TResult extends Object?>({
     required TResult Function(NearbyDevicesInitial value) initial,
     required TResult Function(NearbyDevicesLoading value) loading,
+    required TResult Function(TickerLoading value) tickerLoading,
     required TResult Function(NearbyDevicesSuccess value) successDevicesInfo,
     required TResult Function(IsBluetoothEnabled value) checkBTOn,
+    required TResult Function(CurrentStateNum value) getCurrentState,
   }) {
     return successDevicesInfo(this);
   }
@@ -700,8 +996,10 @@ class _$NearbyDevicesSuccess implements NearbyDevicesSuccess {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(NearbyDevicesInitial value)? initial,
     TResult? Function(NearbyDevicesLoading value)? loading,
+    TResult? Function(TickerLoading value)? tickerLoading,
     TResult? Function(NearbyDevicesSuccess value)? successDevicesInfo,
     TResult? Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult? Function(CurrentStateNum value)? getCurrentState,
   }) {
     return successDevicesInfo?.call(this);
   }
@@ -711,8 +1009,10 @@ class _$NearbyDevicesSuccess implements NearbyDevicesSuccess {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NearbyDevicesInitial value)? initial,
     TResult Function(NearbyDevicesLoading value)? loading,
+    TResult Function(TickerLoading value)? tickerLoading,
     TResult Function(NearbyDevicesSuccess value)? successDevicesInfo,
     TResult Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult Function(CurrentStateNum value)? getCurrentState,
     required TResult orElse(),
   }) {
     if (successDevicesInfo != null) {
@@ -799,8 +1099,10 @@ class _$IsBluetoothEnabled implements IsBluetoothEnabled {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() tickerLoading,
     required TResult Function(List<ScanResult> result) successDevicesInfo,
     required TResult Function(bool isBtOn) checkBTOn,
+    required TResult Function(num tick) getCurrentState,
   }) {
     return checkBTOn(isBtOn);
   }
@@ -810,8 +1112,10 @@ class _$IsBluetoothEnabled implements IsBluetoothEnabled {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? tickerLoading,
     TResult? Function(List<ScanResult> result)? successDevicesInfo,
     TResult? Function(bool isBtOn)? checkBTOn,
+    TResult? Function(num tick)? getCurrentState,
   }) {
     return checkBTOn?.call(isBtOn);
   }
@@ -821,8 +1125,10 @@ class _$IsBluetoothEnabled implements IsBluetoothEnabled {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? tickerLoading,
     TResult Function(List<ScanResult> result)? successDevicesInfo,
     TResult Function(bool isBtOn)? checkBTOn,
+    TResult Function(num tick)? getCurrentState,
     required TResult orElse(),
   }) {
     if (checkBTOn != null) {
@@ -836,8 +1142,10 @@ class _$IsBluetoothEnabled implements IsBluetoothEnabled {
   TResult map<TResult extends Object?>({
     required TResult Function(NearbyDevicesInitial value) initial,
     required TResult Function(NearbyDevicesLoading value) loading,
+    required TResult Function(TickerLoading value) tickerLoading,
     required TResult Function(NearbyDevicesSuccess value) successDevicesInfo,
     required TResult Function(IsBluetoothEnabled value) checkBTOn,
+    required TResult Function(CurrentStateNum value) getCurrentState,
   }) {
     return checkBTOn(this);
   }
@@ -847,8 +1155,10 @@ class _$IsBluetoothEnabled implements IsBluetoothEnabled {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(NearbyDevicesInitial value)? initial,
     TResult? Function(NearbyDevicesLoading value)? loading,
+    TResult? Function(TickerLoading value)? tickerLoading,
     TResult? Function(NearbyDevicesSuccess value)? successDevicesInfo,
     TResult? Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult? Function(CurrentStateNum value)? getCurrentState,
   }) {
     return checkBTOn?.call(this);
   }
@@ -858,8 +1168,10 @@ class _$IsBluetoothEnabled implements IsBluetoothEnabled {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NearbyDevicesInitial value)? initial,
     TResult Function(NearbyDevicesLoading value)? loading,
+    TResult Function(TickerLoading value)? tickerLoading,
     TResult Function(NearbyDevicesSuccess value)? successDevicesInfo,
     TResult Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult Function(CurrentStateNum value)? getCurrentState,
     required TResult orElse(),
   }) {
     if (checkBTOn != null) {
@@ -876,5 +1188,162 @@ abstract class IsBluetoothEnabled implements NearbyDevicesState {
   bool get isBtOn;
   @JsonKey(ignore: true)
   _$$IsBluetoothEnabledCopyWith<_$IsBluetoothEnabled> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CurrentStateNumCopyWith<$Res> {
+  factory _$$CurrentStateNumCopyWith(
+          _$CurrentStateNum value, $Res Function(_$CurrentStateNum) then) =
+      __$$CurrentStateNumCopyWithImpl<$Res>;
+  @useResult
+  $Res call({num tick});
+}
+
+/// @nodoc
+class __$$CurrentStateNumCopyWithImpl<$Res>
+    extends _$NearbyDevicesStateCopyWithImpl<$Res, _$CurrentStateNum>
+    implements _$$CurrentStateNumCopyWith<$Res> {
+  __$$CurrentStateNumCopyWithImpl(
+      _$CurrentStateNum _value, $Res Function(_$CurrentStateNum) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? tick = null,
+  }) {
+    return _then(_$CurrentStateNum(
+      tick: null == tick
+          ? _value.tick
+          : tick // ignore: cast_nullable_to_non_nullable
+              as num,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CurrentStateNum implements CurrentStateNum {
+  const _$CurrentStateNum({required this.tick});
+
+  @override
+  final num tick;
+
+  @override
+  String toString() {
+    return 'NearbyDevicesState.getCurrentState(tick: $tick)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CurrentStateNum &&
+            (identical(other.tick, tick) || other.tick == tick));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, tick);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CurrentStateNumCopyWith<_$CurrentStateNum> get copyWith =>
+      __$$CurrentStateNumCopyWithImpl<_$CurrentStateNum>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() tickerLoading,
+    required TResult Function(List<ScanResult> result) successDevicesInfo,
+    required TResult Function(bool isBtOn) checkBTOn,
+    required TResult Function(num tick) getCurrentState,
+  }) {
+    return getCurrentState(tick);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? tickerLoading,
+    TResult? Function(List<ScanResult> result)? successDevicesInfo,
+    TResult? Function(bool isBtOn)? checkBTOn,
+    TResult? Function(num tick)? getCurrentState,
+  }) {
+    return getCurrentState?.call(tick);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? tickerLoading,
+    TResult Function(List<ScanResult> result)? successDevicesInfo,
+    TResult Function(bool isBtOn)? checkBTOn,
+    TResult Function(num tick)? getCurrentState,
+    required TResult orElse(),
+  }) {
+    if (getCurrentState != null) {
+      return getCurrentState(tick);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(NearbyDevicesInitial value) initial,
+    required TResult Function(NearbyDevicesLoading value) loading,
+    required TResult Function(TickerLoading value) tickerLoading,
+    required TResult Function(NearbyDevicesSuccess value) successDevicesInfo,
+    required TResult Function(IsBluetoothEnabled value) checkBTOn,
+    required TResult Function(CurrentStateNum value) getCurrentState,
+  }) {
+    return getCurrentState(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(NearbyDevicesInitial value)? initial,
+    TResult? Function(NearbyDevicesLoading value)? loading,
+    TResult? Function(TickerLoading value)? tickerLoading,
+    TResult? Function(NearbyDevicesSuccess value)? successDevicesInfo,
+    TResult? Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult? Function(CurrentStateNum value)? getCurrentState,
+  }) {
+    return getCurrentState?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NearbyDevicesInitial value)? initial,
+    TResult Function(NearbyDevicesLoading value)? loading,
+    TResult Function(TickerLoading value)? tickerLoading,
+    TResult Function(NearbyDevicesSuccess value)? successDevicesInfo,
+    TResult Function(IsBluetoothEnabled value)? checkBTOn,
+    TResult Function(CurrentStateNum value)? getCurrentState,
+    required TResult orElse(),
+  }) {
+    if (getCurrentState != null) {
+      return getCurrentState(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CurrentStateNum implements NearbyDevicesState {
+  const factory CurrentStateNum({required final num tick}) = _$CurrentStateNum;
+
+  num get tick;
+  @JsonKey(ignore: true)
+  _$$CurrentStateNumCopyWith<_$CurrentStateNum> get copyWith =>
       throw _privateConstructorUsedError;
 }
